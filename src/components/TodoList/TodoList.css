@@ -1,0 +1,3 @@
+/* Task list and its empty and footer states. */
+.todo-list { list-style: none; }
+.empty-state { display: grid; justify-items: center; text-align: center; }

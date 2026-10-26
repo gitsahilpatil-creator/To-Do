@@ -1,0 +1,4 @@
+/* Authentication feature styles are grouped here for easy maintenance. */
+.login-layout { isolation: isolate; }
+.login-card { position: relative; z-index: 1; }
+.login-form input:focus-visible { outline: 2px solid #f4d35e; outline-offset: 2px; }

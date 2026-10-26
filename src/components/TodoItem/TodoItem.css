@@ -1,0 +1,5 @@
+/* Individual task actions and inline editor. */
+.todo-item:focus-within .edit-button,
+.todo-item:focus-within .delete-button { opacity: 1; }
+.edit-form { min-width: 150px; flex: 1; display: flex; align-items: center; gap: 7px; }
+.edit-form input { width: 100%; min-width: 0; }

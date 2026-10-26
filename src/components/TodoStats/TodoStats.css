@@ -1,0 +1,3 @@
+/* Progress and count cards. */
+.dashboard-stats { width: 100%; }
+.progress-track span { display: block; }

@@ -1,0 +1,8 @@
+/* Todo feature interaction styles. Shared visual tokens remain in src/styles.css. */
+.todo-page { min-height: 100vh; }
+.todo-item:focus-within .edit-button,
+.todo-item:focus-within .delete-button { opacity: 1; }
+.edit-form input { width: 100%; }
+@media (max-width: 520px) {
+  .edit-form { width: 100%; }
+}

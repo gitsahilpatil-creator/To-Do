@@ -1,0 +1,3 @@
+/* Filter and search controls. */
+.list-toolbar { display: flex; align-items: center; }
+.search-field { display: flex; align-items: center; }

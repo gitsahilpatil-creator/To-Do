@@ -1,0 +1,4 @@
+/* Add task form controls. */
+.task-entry { width: 100%; }
+.task-title-field { display: flex; align-items: center; }
+.task-options { display: flex; align-items: center; }

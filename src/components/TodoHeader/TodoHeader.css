@@ -1,0 +1,3 @@
+/* Header component styles are shared through the global theme in styles.css. */
+.topbar { flex-shrink: 0; }
+.wordmark { white-space: nowrap; }
