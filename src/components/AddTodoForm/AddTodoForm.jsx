@@ -1,6 +1,7 @@
 import './AddTodoForm.css';
+import ClockPicker from '../ClockPicker/ClockPicker.jsx';
 
-export default function AddTodoForm({ draft, onDraftChange, priority, onPriorityChange, dueDate, onDueDateChange, todayString, onSubmit }) {
+export default function AddTodoForm({ draft, onDraftChange, priority, onPriorityChange, dueDate, onDueDateChange, dueTime, onDueTimeChange, todayString, onSubmit }) {
   return (
     <form className="add-form" onSubmit={onSubmit}>
       <div className="task-entry">
@@ -12,6 +13,7 @@ export default function AddTodoForm({ draft, onDraftChange, priority, onPriority
           </select>
           <label className="visually-hidden" htmlFor="task-due-date">Due date</label>
           <input id="task-due-date" type="date" aria-label="Due date" min={todayString} value={dueDate} onChange={(event) => onDueDateChange(event.target.value)} />
+          <ClockPicker value={dueTime} onChange={onDueTimeChange} label="Due time" />
           <button className="button button-add" type="submit" disabled={!draft.trim()}>Add task <span aria-hidden="true">→</span></button>
         </div>
       </div>

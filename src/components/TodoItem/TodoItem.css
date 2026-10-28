@@ -1,5 +1,12 @@
 /* Individual task actions and inline editor. */
 .todo-item:focus-within .edit-button,
 .todo-item:focus-within .delete-button { opacity: 1; }
-.edit-form { min-width: 150px; flex: 1; display: flex; align-items: center; gap: 7px; }
-.edit-form input { width: 100%; min-width: 0; }
+.todo-item:has(.edit-form) { flex-wrap: wrap; align-items: flex-start; padding: 16px 0; }
+.todo-item:has(.edit-form) > .check-button { margin-top: 9px; }
+.edit-form { min-width: 0; flex: 1 1 calc(100% - 42px); display: flex; flex-direction: column; align-items: stretch; gap: 12px; }
+.edit-form > input { width: 100%; min-width: 0; }
+.edit-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 9px; }
+.edit-options .clock-picker { min-width: 0; }
+.edit-options .clock-trigger { min-width: 0; padding: 0 9px; font-size: 12px; }
+.edit-actions { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 520px) { .edit-options { grid-template-columns: 1fr; } }

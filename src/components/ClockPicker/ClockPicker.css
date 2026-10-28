@@ -1,0 +1,23 @@
+.clock-picker { position: relative; flex: 1 1 150px; min-width: 150px; }
+.clock-trigger { width: 100%; height: 42px; display: flex; align-items: center; gap: 9px; padding: 0 13px; border: 1px solid #3b433c; border-radius: 9px; background: #202622; color: #c2c8bd; font: inherit; font-size: 13px; text-align: left; cursor: pointer; }
+.clock-trigger > span { color: #f4d35e; font-size: 18px; }
+.clock-trigger:hover, .clock-trigger[aria-expanded="true"] { border-color: #d9bb45; }
+.clock-popover { position: absolute; z-index: 10; top: calc(100% + 8px); left: 50%; width: 278px; padding: 15px; transform: translateX(-50%); border: 1px solid #394139; border-radius: 14px; background: #191e1b; box-shadow: 0 18px 40px #0009; color: #f2f0e8; }
+.clock-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.clock-caption { display: block; margin-bottom: 3px; color: #9ca69a; font-size: 9px; letter-spacing: .13em; }
+.clock-heading strong { color: #f4d35e; font-size: 25px; font-variant-numeric: tabular-nums; }
+.clock-period { display: grid; gap: 3px; }
+.clock-period button, .clock-footer button { border: 0; border-radius: 6px; background: transparent; color: #aab1a7; font: inherit; font-size: 11px; cursor: pointer; }
+.clock-period button { padding: 5px 8px; }
+.clock-period button.selected { background: #39331d; color: #f4d35e; }
+.clock-face { position: relative; width: 228px; height: 228px; margin: 0 auto; border: 1px solid #424a41; border-radius: 50%; background: radial-gradient(circle, #252c26 0, #202622 68%, #1d231f 100%); touch-action: none; cursor: grab; }
+.clock-face:active { cursor: grabbing; }
+.clock-hand { position: absolute; z-index: 1; left: calc(50% - 1px); top: 11%; width: 2px; height: 39%; transform-origin: 50% 100%; background: #f4d35e88; pointer-events: none; }
+.clock-number { position: absolute; z-index: 1; width: 34px; height: 34px; padding: 0; transform: translate(-50%, -50%); border: 0; border-radius: 50%; background: transparent; color: #d0d4ca; font: inherit; font-size: 12px; cursor: pointer; }
+.clock-number:hover, .clock-number:focus-visible, .clock-number.selected { outline: none; background: #f4d35e; color: #1a1914; }
+.clock-indicator { position: absolute; z-index: 3; width: 15px; height: 15px; transform: translate(-50%, -50%); border: 3px solid #f4d35e; border-radius: 50%; background: #202622; box-shadow: 0 0 0 2px #202622; pointer-events: none; }
+.clock-center { position: absolute; left: 50%; top: 50%; width: 7px; height: 7px; transform: translate(-50%, -50%); border-radius: 50%; background: #f4d35e; }
+.clock-footer { display: flex; justify-content: space-between; margin-top: 10px; }
+.clock-footer button { padding: 7px 8px; }
+.clock-footer button:hover { color: #f4d35e; }
+@media (max-width: 520px) { .clock-popover { left: 0; width: min(278px, calc(100vw - 56px)); transform: none; } }

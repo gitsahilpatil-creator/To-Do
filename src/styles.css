@@ -147,7 +147,7 @@ body, .todo-page { background: #101112; color: #f2f0e8; }
 .check-button:hover { border-color: #f4d35e; }
 .is-complete .check-button { border-color: #f4d35e; background: #f4d35e; }
 .todo-text { color: #e6e4db; }
-.is-complete .todo-text { color: #85867f; }
+.is-complete .todo-text { color: #aeb3a9; text-decoration: none; }
 .delete-button { color: #8b8c85; }
 .delete-button:hover { background: #3a2723; color: #ff9f86; }
 .empty-icon { background: #302b19; color: #f4d35e; }
@@ -286,7 +286,7 @@ body {
 .task-title-field input { color: #111; caret-color: #f4d35e; }
 .task-title-field input::placeholder { color: #a3aa9e; opacity: 1; }
 .task-options { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin: 10px 0 0 37px; }
-.task-options select, .task-options input {
+.task-options select, .task-options input, .edit-options select, .edit-options input {
   height: 38px;
   padding: 0 11px;
   border: 1px solid #3b433c;
@@ -296,13 +296,19 @@ body {
   color: #c2c8bd;
   font-size: 12px;
 }
-.task-options select:focus, .task-options input:focus { border-color: #d9bb45; box-shadow: 0 0 0 3px #f4d35e1f; }
+.task-options select:focus, .task-options input:focus, .edit-options select:focus, .edit-options input:focus { border-color: #d9bb45; box-shadow: 0 0 0 3px #f4d35e1f; }
 .task-options input[type="date"] { color-scheme: dark; }
+.edit-options input[type="date"] { width: 100%; min-width: 0; padding: 0 9px; font-size: 12px; color-scheme: dark; }
+.edit-options select { width: 100%; min-width: 0; padding: 0 9px; font-size: 12px; }
 .button-add { height: 42px; padding: 0 17px; font-size: 13px; }
 .list-toolbar { min-height: 68px; gap: 16px; padding: 13px 24px; border-bottom-color: #ffffff12; }
 .filter-tabs { gap: 6px; }
 .filter-tab { padding: 9px 12px; font-size: 13px; }
 .filter-count { font-size: 11px; }
+.priority-filter-field select { height: 38px; max-width: 160px; padding: 0 30px 0 12px; border: 1px solid #353d37; border-radius: 8px; outline: none; appearance: none; background: #171c19; color: #c2c8bd; font: inherit; font-size: 12px; cursor: pointer; }
+.priority-filter-field select:focus { border-color: #d9bb45; box-shadow: 0 0 0 3px #f4d35e1f; }
+.priority-filter-field select:hover { border-color: #66715f; }
+.priority-filter-field select option { background: #202622; color: #c2c8bd; }
 .search-field { width: min(250px, 32%); height: 38px; display: flex; align-items: center; gap: 8px; padding: 0 11px; border: 1px solid #353d37; border-radius: 8px; color: #9fa99e; background: #171c19; }
 .search-field:focus-within { border-color: #d9bb45; box-shadow: 0 0 0 3px #f4d35e1f; }
 .search-field > span { font-size: 19px; }
@@ -321,7 +327,7 @@ body {
 .due-date.is-overdue { color: #ff9f86; }
 .delete-button { width: 34px; height: 34px; font-size: 24px; }
 .edit-button { min-height: 36px; padding: 0 12px; font-size: 13px; }
-.edit-form input { height: 40px; font-size: 15px; }
+.edit-form > input[aria-label="Todo title"] { min-height: 52px; padding: 0 14px; font-size: 16px; }
 .edit-save-button, .edit-cancel-button { min-height: 38px; padding: 0 12px; font-size: 12px; }
 .empty-state { padding: 62px 20px 56px; }
 .empty-icon { width: 48px; height: 48px; font-size: 27px; }
